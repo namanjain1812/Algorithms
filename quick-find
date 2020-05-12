@@ -1,7 +1,7 @@
 import numpy as np
 import random
 n=int(input())
-k=5
+k=int(input())
 id=np.zeros(n)
 for i in range(n):
     id[i]=i
