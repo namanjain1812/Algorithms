@@ -1,0 +1,24 @@
+import numpy as np
+import random
+n=int(input())
+k=5
+id=np.zeros(n)
+for i in range(n):
+    id[i]=i
+while True:
+    if(k>0):
+        k=k-1
+        a=int(id[random.randint(0,n-1)])
+        b=int(id[random.randint(0,n-1)])
+        for i in range(n):
+            if(id[i]==a):
+                id[i]=id[b]
+    else:
+        c=random.randint(0,n-1)
+        d=random.randint(0,n-1)
+        if(id[c]==id[d]):
+            print("yes")
+            break
+        else:
+            print("no")
+            break
