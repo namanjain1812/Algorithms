@@ -1,0 +1,27 @@
+import numpy as np
+import random
+n=int(input())
+k=int(input())
+id=np.zeros(n)
+for i in range(n):
+    id[i]=i
+def root(c):
+    x=c
+    while id[x]!=x:
+        x=int(id[x])
+    return x
+while True:
+    if(k>0):
+        k=k-1
+        a=random.randint(0,n-1)
+        b=random.randint(0,n-1)
+        id[root(b)]=root(a)
+    else:
+        c=random.randint(0,n-1)
+        d=random.randint(0,n-1)
+        if(root(c)==root(d)):
+            print("yes")
+            break
+        else:
+            print("no")
+            break
